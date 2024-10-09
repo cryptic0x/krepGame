@@ -1,0 +1,12 @@
+// the right order counts
+@tailwind base;
+@import 'styles';
+@import 'fonts';
+@import 'document';
+@import 'games/flappyTaoshi';
+@import 'games/taoshiJump';
+@import 'games/taoshiEscape';
+@import 'games/memeInvaders';
+@import 'loader';
+@tailwind components;
+@tailwind utilities;

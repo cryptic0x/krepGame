@@ -1,0 +1,13 @@
+#game-taoshi-jump {
+  *[data-asset] {
+    display: none;
+  }
+
+  #game-wrapper {
+    @apply select-none;
+
+    * {
+      @apply select-none;
+    }
+  }
+}

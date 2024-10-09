@@ -1,0 +1,1 @@
+const getLocalStorageItem=(object,key)=>(object=localStorage.getItem(object))?JSON.parse(object)[key]:"no data";export{getLocalStorageItem};

@@ -1,0 +1,128 @@
+.loader {
+  @apply grid place-items-center inset-0 fixed z-50 bg-slate-200;
+
+  body:not(.loading) & {
+    @apply hidden;
+  }
+
+  > div {
+    @apply w-[180px] h-[60px] relative;
+  }
+  .circles {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    height: 60px;
+    width: 180px;
+    animation: animcircles 0.5s infinite linear;
+
+    span {
+      position: absolute;
+      top: 25px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+      background-color: #000000;
+
+      &.one {
+        right: 80px;
+      }
+
+      &.two {
+        right: 40px;
+      }
+
+      &.three {
+        right: 0px;
+      }
+    }
+  }
+
+  .pacman {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+
+    .eye {
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      height: 7px;
+      width: 7px;
+      border-radius: 7px;
+      background-color: #ffffff;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 60px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 30px;
+        width: 60px;
+        background-color: #d56940;
+      }
+    }
+
+    .top {
+      animation: animtop 0.5s infinite;
+
+      &:before {
+        top: 0;
+        border-radius: 60px 60px 0px 0px;
+      }
+    }
+
+    .bottom:before {
+      bottom: 0;
+      border-radius: 0px 0px 60px 60px;
+    }
+
+    .left:before {
+      bottom: 0;
+      height: 60px;
+      width: 30px;
+      border-radius: 60px 0px 0px 60px;
+    }
+  }
+}
+
+@keyframes animcircles {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-40px, 0px);
+  }
+}
+
+@keyframes animtop {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+.pacman .bottom {
+  animation: animbottom 0.5s infinite;
+}
+
+@keyframes animbottom {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,1 @@
+const setLocalStorageItem=(object,key,value)=>{var localStorageObject;null===localStorage.getItem(object)?localStorage.setItem(object,JSON.stringify({})):(localStorageObject=localStorage.getItem(object))&&((localStorageObject=JSON.parse(localStorageObject))[key]=value,localStorage.setItem(object,JSON.stringify(localStorageObject)))};export{setLocalStorageItem};

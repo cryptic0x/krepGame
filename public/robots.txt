@@ -1,0 +1,10 @@
+# User-Agent Rules
+User-agent: *
+Allow: /flappyKrep
+Disallow: /
+
+# Host
+Host: https://krepgames.com
+
+# Sitemaps
+Sitemap: https://krepgames.com/sitemap.xml

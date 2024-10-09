@@ -1,0 +1,13 @@
+#game-flappy-taoshi {
+  *[data-asset] {
+    display: none;
+  }
+
+  #game-wrapper {
+    @apply select-none;
+
+    * {
+      @apply select-none;
+    }
+  }
+}

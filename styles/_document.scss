@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Retro';
+  src: url('../public/fonts/retro.woff2') format('woff2');
+  font-weight: 400;
+}
+
+body {
+  @apply bg-slate-200 text-gray-900;
+
+  #__next {
+    @apply relative z-0 flex flex-col;
+    min-height: 100dvh;
+  }
+
+  .h-dvh {
+    height: 100dvh;
+  }
+}
+
+.btn {
+  @apply bg-[#e26037] hover:bg-orange-500 text-xl text-white font-semibold py-2 px-4 border border-orange-400 flex items-center gap-1 rounded shadow-2xl justify-center outline-none;
+}
